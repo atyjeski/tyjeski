@@ -21,7 +21,7 @@
   <body>
     <header>
       <div class="logo">
-        <img src="{% static 'img/andres.png' %}" alt="">
+        <img src="{% static 'img/logo.png' %}" alt="">
       </div>
       <button class="nav-toggle" aria-label="toggle navigation">
         <span class="hamburger"></span>
@@ -42,7 +42,7 @@
         Hi, I am <strong>Andres Tyjeski</strong>
       </h1>
       <p class="section__subtitle section__subtitle--intro">the maker of this website</p>
-      <img src="img/andres.png" alt="a picture of Andres Tyjeski">
+      <img src="{% static 'img/andres.png' %}" alt="a picture of Andres Tyjeski" class="intro__img">
     </section>
 
     <!-- My Services -->
@@ -79,7 +79,7 @@
         <p>This is the paragraph where I talk about myself</p>
       </div>
 
-      <img src="img/andres_2.png" alt="another picture of Andres">
+      <img src="{% static 'img/andres_2.png' %}" alt="another picture of Andres">
     </section>
 
     <!-- My Work -->
@@ -90,19 +90,19 @@
       <div class="portfolio">
         <!-- Portfolio Item 1 -->
         <a href="#" class="portfolio__item">
-          <img src="portfolio-01.jpg" alt="" class="portfolio__img">
+          <img src="{% static 'portfolio-01.png' %}" alt="" class="portfolio__img">
         </a>
         <!-- Portfolio Item 2 -->
         <a href="#" class="portfolio__item">
-          <img src="portfolio-02.jpg" alt="" class="portfolio__img">
+          <img src="{% static 'portfolio-02.png' %}" alt="" class="portfolio__img">
         </a>
         <!-- Portfolio Item 3 -->
         <a href="#" class="portfolio__item">
-          <img src="portfolio-03.jpg" alt="" class="portfolio__img">
+          <img src="{% static 'portfolio-03.png' %}" alt="" class="portfolio__img">
         </a>
         <!-- Portfolio Item 4 -->
         <a href="#" class="portfolio__item">
-          <img src="portfolio-04.jpg" alt="" class="portfolio__img">
+          <img src="{% static 'portfolio-04.png' %}" alt="" class="portfolio__img">
         </a>
       </div>
     </section>
