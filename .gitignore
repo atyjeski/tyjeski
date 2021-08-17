@@ -3,3 +3,4 @@ __pycache__
 backend/db.sqlite3
 notes.txt
 .DS_Store
+staticfiles
