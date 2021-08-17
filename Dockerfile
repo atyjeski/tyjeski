@@ -17,5 +17,8 @@ ADD backend /app
 RUN useradd appuser && chown -R appuser /app
 USER appuser
 
+# Collect static files
+RUN python manage.py collectstatic --noinput
+
 # run gunicorn
 CMD gunicorn backend.wsgi:application --bind 0.0.0.0:$PORT
