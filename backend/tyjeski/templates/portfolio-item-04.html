@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Introduction -->
+<section class="intro">
+    <h1 class="section__title section__title--intro">
+        The title <strong>of my project</strong>
+    </h1>
+    <p class="section__subtitle section__subtitle--intro">a short subtitle</p>
+    <img src="{% static 'img/portfolio-04.png' %}" alt="" class="intro__img">
+</section>
+
+<div class="portfolio-item-individual">
+    <p>paragraph</p>
+    <img src="{% static 'img/portfolio-details.jpeg' %}" alt="">
+    <p>paragraph</p>
+    <p>paragraph</p>
+</div>
+
+<iframe width="420" height="315"
+    src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+
+{% endblock %}
