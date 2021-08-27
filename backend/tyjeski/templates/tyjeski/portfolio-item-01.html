@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'tyjeski/base.html' %}
 {% load static %}
 
 {% block content %}
@@ -8,14 +8,16 @@
         The title <strong>of my project</strong>
     </h1>
     <p class="section__subtitle section__subtitle--intro">a short subtitle</p>
-    <img src="{% static 'img/portfolio-03.png' %}" alt="" class="intro__img">
+    <img src="{% static 'tyjeski/img/portfolio-01.png' %}" alt="" class="intro__img">
 </section>
 
 <div class="portfolio-item-individual">
     <p>paragraph</p>
-    <img src="{% static 'img/portfolio-details.jpeg' %}" alt="">
+    <img src="{% static 'tyjeski/img/portfolio-details.jpeg' %}" alt="">
     <p>paragraph</p>
     <p>paragraph</p>
+
+    <a href="{% url 'hanabi:home' %}"> HANABI DEMO </a>
 </div>
 
 {% endblock %}

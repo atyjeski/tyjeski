@@ -14,24 +14,24 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+  <link rel="stylesheet" href="{% static 'tyjeski/css/style.css' %}" type="text/css">
 
 </head>
 
 <body>
   <header>
     <div class="logo">
-      <img src="{% static 'img/logo.png' %}" alt="">
+      <img src="{% static 'tyjeski/img/logo.png' %}" alt="">
     </div>
     <button class="nav-toggle" aria-label="toggle navigation">
       <span class="hamburger"></span>
     </button>
     <nav class="nav">
       <ul class="nav__list">
-        <li class="nav__item"><a href="{% url 'home' %}" class="nav__link">Home</a></li>
-        <li class="nav__item"><a href="{% url 'home' %}#services" class="nav__link">My Services</a></li>
-        <li class="nav__item"><a href="{% url 'home' %}#about" class="nav__link">About Me</a></li>
-        <li class="nav__item"><a href="{% url 'home' %}#work" class="nav__link">My Work</a></li>
+        <li class="nav__item"><a href="{% url 'tyjeski:home' %}" class="nav__link">Home</a></li>
+        <li class="nav__item"><a href="{% url 'tyjeski:home' %}#services" class="nav__link">My Services</a></li>
+        <li class="nav__item"><a href="{% url 'tyjeski:home' %}#about" class="nav__link">About Me</a></li>
+        <li class="nav__item"><a href="{% url 'tyjeski:home' %}#work" class="nav__link">My Work</a></li>
       </ul>
     </nav>
   </header>
@@ -51,7 +51,7 @@
     </ul>
   </footer>
 
-  <script src="{% static 'js/index.js' %}"></script>
+  <script src="{% static 'tyjeski/js/index.js' %}"></script>
 
 </body>
 

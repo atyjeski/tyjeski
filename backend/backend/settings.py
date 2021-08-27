@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', default=get_random_secret_key())
 
-DEBUG = int(os.environ.get('DEBUG', default=0))
+DEBUG = True #int(os.environ.get('DEBUG', default=0))
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'tyjeski.herokuapp.com']
 
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tyjeski',
+    'hanabi',
 ]
 
 MIDDLEWARE = [
@@ -117,6 +118,10 @@ USE_L10N = True
 
 USE_TZ = True
 
+LOGIN_URL = '/hanabi/login'
+
+# Default URL to redirect to after a user logs in.
+LOGIN_REDIRECT_URL = '/hanabi/home'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/

@@ -1,0 +1,226 @@
+body { 
+    height: 100vw;
+    background-color: rgb(63, 48, 121);
+    background-image: linear-gradient(rgb(63, 48, 121), rgb(96, 79, 126)); 
+
+    color: white;
+}
+
+a {
+    color: yellow
+}
+
+.big-heading {
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: sans-serif;
+    padding: 25px 50px;
+    text-align: center;
+    color: white;
+}
+
+.big-button {
+    font-size: x-large;
+    padding: 15px 32px;
+    width: 250px;
+    text-align: center;
+}
+
+.user-info {
+    text-align: right;
+    font-family: sans-serif; 
+    padding-right: 10px;
+    font-size: large;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    height: 200px;
+}
+
+ul {
+    background: rgb(45, 34, 88);
+    padding: 20px;
+    width: 30em;
+}
+
+ul li {
+  margin: 10px;
+}
+
+.hand {
+    display: flex;
+}
+
+.card-blue {
+    height: 50px;
+    width: 40px;
+    background-color: blue;
+    margin: 10px;
+}
+
+.card-green {
+    height: 50px;
+    width: 40px;
+    background-color: green;
+    margin: 10px;
+}
+
+.card-red {
+    height: 50px;
+    width: 40px;
+    background-color: red;
+    margin: 10px;
+}
+
+.card-white {
+    height: 50px;
+    width: 40px;
+    background-color: white;
+    margin: 10px;
+    color: black;
+}
+
+.card-yellow {
+    height: 50px;
+    width: 40px;
+    background-color: yellow;
+    margin: 10px;
+    color: black;
+}
+
+.card-back {
+    height: 50px;
+    width: 40px;
+    background-color: gray;
+    margin: 10px;
+}
+
+.sidebar_wrapper {
+    display: grid;
+    position: absolute;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    background-color: rgb(45, 34, 88);
+    padding: 10px;
+    align-items: center;
+
+    top: 84px;
+    right: 0px;
+
+    width: 120px;
+    height: 200px;
+
+}
+
+.hints {
+    text-align: center;
+    line-height: 35px;
+    color: black;
+    height: 35px;
+    width: 35px;
+    background-color: rgb(57, 245, 245);
+    border-radius: 50%;
+    display: inline-block;
+    margin: auto;
+}
+
+.strikes {
+    text-align: center;
+    line-height: 35px;
+    color: white;
+    height: 35px;
+    width: 35px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+    margin: auto;
+}
+
+.deck {
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+    width: 40px;
+    background-color: blue;
+    display: inline-block;
+    margin: auto;
+}
+
+.text-hints {
+    color:white;
+    font-size: 20px; 
+}
+
+.text-strikes {
+    color:white;
+    font-size: 20px; 
+}
+
+.text-deck {
+    color:white;
+    font-size: 20px; 
+}
+
+
+
+
+.discard {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 3px;
+}
+
+.discard li {
+    list-style-type: none;
+}
+
+.tabletop {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 3px;
+}
+
+.tabletop li {
+    list-style-type: none;
+}
+
+
+/* Dropdown Button from w3schools.com */
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
+
+

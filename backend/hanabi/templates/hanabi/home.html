@@ -1,0 +1,20 @@
+{% extends "hanabi/base.html" %}
+
+{% block content %}
+	<div class="big-heading">
+		Hanabi Online
+	</div>
+
+	<div class="center">
+		<div>
+			<form action="{% url 'hanabi:create_room' %}">
+			<button class="big-button" type="submit"> Create a Room </button> 
+			</form>
+		</div>
+		<div>
+			<form action="{% url 'hanabi:join_room' %}">
+			<button class="big-button" type="submit">Join a Room </button> 
+			</form>
+		</div>
+	</div>
+{% endblock %}

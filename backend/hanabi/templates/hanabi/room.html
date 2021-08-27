@@ -1,0 +1,47 @@
+{% extends "hanabi/base.html" %}
+
+{% block header %}
+	{% load static %}
+	<script src="{% static 'hanabi/js/game.js' %}" type="text/javascript"></script>
+{% endblock %}
+
+{% block content %}
+	<b> Tabletop </b>
+	<ul class="tabletop" id="id_tabletop">
+	</ul>
+	<div class="sub-title"> Current players </div>
+	<div class = "sidebar_wrapper">
+		<b class = "text-hints"> Hints</b>
+		<div class="hints" id="id_hints"></div>
+		<b class = "text-strikes">Fuses</b>
+		<div class="strikes" id="id_strikes"></div>
+		<b class="text-deck">Deck</b>
+		<div class="deck" id="id_deck_size"></div>
+	</div>
+	<ol id="id_hands">
+	</ol>
+
+	{% if room.size > players|length and not playing %}
+        <a href="{% url 'hanabi:play_game' room.id %}">
+			<button>Join</button>
+		</a>
+    {% endif %}
+
+	<div id="id_room_message">
+	</div>
+
+	<ul id = "id_log"> 
+	</ul>
+
+	<b> Discard Pile </b>
+	<ul class="discard" id="id_discard">
+	</ul>	
+
+	<script>
+		var room_id = "{{ room.id }}"
+
+		window.onload = getGameInfo;
+		window.setInterval(getGameInfo, 5000);
+	</script>
+
+{% endblock %}
