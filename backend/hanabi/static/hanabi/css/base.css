@@ -55,49 +55,34 @@ ul li {
     display: flex;
 }
 
-.card-blue {
-    height: 50px;
-    width: 40px;
-    background-color: blue;
-    margin: 10px;
-}
-
-.card-green {
-    height: 50px;
-    width: 40px;
-    background-color: green;
-    margin: 10px;
-}
-
-.card-red {
-    height: 50px;
-    width: 40px;
-    background-color: red;
-    margin: 10px;
-}
-
+.card-back,
+.card-blue,
+.card-green,
+.card-red,
+.card-yellow,
 .card-white {
-    height: 50px;
-    width: 40px;
-    background-color: white;
-    margin: 10px;
-    color: black;
-}
-
-.card-yellow {
-    height: 50px;
-    width: 40px;
-    background-color: yellow;
-    margin: 10px;
-    color: black;
-}
-
-.card-back {
     height: 50px;
     width: 40px;
     background-color: gray;
     margin: 10px;
+    color: black
 }
+
+.card-blue,
+.card-green,
+.card-red {
+    color: white;
+}
+
+.card-blue { background-color: blue; }
+
+.card-green { background-color: green; }
+
+.card-red { background-color: red; }
+
+.card-white { background-color: white; }
+
+.card-yellow { background-color: yellow; }
 
 .sidebar_wrapper {
     display: grid;
