@@ -18,4 +18,5 @@ urlpatterns = [
     path('give_hint_color/<int:room_id>/<int:card_color>/<int:player_id>', views.give_hint_color, name='give_hint_color'),
     path('give_hint_number/<int:room_id>/<int:card_number>/<int:player_id>', views.give_hint_number, name='give_hint_number'),
     path('get-game-info/<int:room_id>', views.get_game_info),
+    path('new', views.interface_overhaul, name='interface-overhaul'),
 ]

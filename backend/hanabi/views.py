@@ -443,3 +443,7 @@ def get_game_info(request, room_id):
     response_json = json.dumps(response_object)
     response = HttpResponse(response_json, content_type='application/json')
     return response
+
+
+def interface_overhaul(request):
+    return render(request, 'hanabi/interface-overhaul.html')

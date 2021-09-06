@@ -1,0 +1,191 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Custom Properties */
+
+:root {
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Times New Roman', Times, serif;
+
+    --fw-reg: 300;
+    --fw-bold: 900;
+    --clr-light: #fff;
+    --clr-dark: #0d0d0d;
+    --clr-bg: #272064;
+    --clr-lives: rgb(202, 32, 32);
+    --clr-hints: rgb(31, 205, 248);
+
+    --fs-small: .8rem;
+    --fs-medium: 1.25rem;
+    --fs-large: 2.25rem;
+
+    --bw: .15rem;
+    --br: .5rem;
+
+    --played-cards-width: min(66vw, 40vh);
+    --played-cards-height: min(33vw, 20vh);
+
+    --card-width: calc(var(--played-cards-width) / 6);
+    --card-height: calc(var(--played-cards-height) / 2);
+}
+
+/* General Styles */
+
+html {
+    overflow: hidden;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: var(--clr-bg);
+    color: var(--clr-light);
+    font-family: var(--ff-primary);
+    font-size: var(--fs-small);
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Game Room */
+
+.room-container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: var(--played-cards-width) auto;
+    grid-template-rows: var(--played-cards-height) auto 20vh;
+    grid-template-areas: 
+        "played discarded"
+        "hands text"
+        "info info";
+    grid-gap: .5rem;
+}
+
+.played-cards,
+.discarded-cards {
+    margin-top: .5rem;
+    padding: .5rem;
+}
+
+.played-cards,
+.player-hands {
+    margin-left: .5rem;
+}
+
+.discarded-cards,
+.game-text {
+    margin-right: .5rem;
+}
+
+.played-cards,
+.discarded-cards,
+.game-info {
+    background: var(--clr-dark);
+    border: var(--bw) solid var(--clr-light);
+    border-radius: var(--br);
+}
+
+.player-hands,
+.game-text {
+    display: grid;
+    grid-template-rows: repeat(auto, 5);
+}
+
+.player-hands {
+    grid-template-columns: 4rem auto;
+}
+
+.played-cards { 
+    grid-area: played;
+    display: flex;
+    flex-direction: column;
+}
+
+.discarded-cards { grid-area: discarded; }
+
+.player-hands { grid-area: hands; }
+
+.game-text { grid-area: text; }
+
+.game-info { grid-area: info; }
+
+/* Played Cards Section */
+
+.played-cards__display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.played-cards__display--stack {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Discarded Cards Section */
+
+/* Players Section */
+
+.player-name {
+    font-size: var(--fs-medium);
+    font-family: var(--ff-secondary);
+}
+
+.player-text,
+.player-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hand {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+/* Game Info Section */
+
+/* Cards */
+
+.card {
+    background-size: 100%;
+    height: var(--card-height);
+    width: var(--card-width);
+    background-repeat: no-repeat;
+}
+
+.r1 { background-image: url(/static/hanabi/img/r1.png); }
+.r2 { background-image: url(/static/hanabi/img/r2.png); }
+.r3 { background-image: url(/static/hanabi/img/r3.png); }
+.r4 { background-image: url(/static/hanabi/img/r4.png); }
+.r5 { background-image: url(/static/hanabi/img/r5.png); }
+.b1 { background-image: url(/static/hanabi/img/b1.png); }
+.b2 { background-image: url(/static/hanabi/img/b2.png); }
+.b3 { background-image: url(/static/hanabi/img/b3.png); }
+.b4 { background-image: url(/static/hanabi/img/b4.png); }
+.b5 { background-image: url(/static/hanabi/img/b5.png); }
+.g1 { background-image: url(/static/hanabi/img/g1.png); }
+.g2 { background-image: url(/static/hanabi/img/g2.png); }
+.g3 { background-image: url(/static/hanabi/img/g3.png); }
+.g4 { background-image: url(/static/hanabi/img/g4.png); }
+.g5 { background-image: url(/static/hanabi/img/g5.png); }
+.y1 { background-image: url(/static/hanabi/img/y1.png); }
+.y2 { background-image: url(/static/hanabi/img/y2.png); }
+.y3 { background-image: url(/static/hanabi/img/y3.png); }
+.y4 { background-image: url(/static/hanabi/img/y4.png); }
+.y5 { background-image: url(/static/hanabi/img/y5.png); }
+.p1 { background-image: url(/static/hanabi/img/p1.png); }
+.p2 { background-image: url(/static/hanabi/img/p2.png); }
+.p3 { background-image: url(/static/hanabi/img/p3.png); }
+.p4 { background-image: url(/static/hanabi/img/p4.png); }
+.p5 { background-image: url(/static/hanabi/img/p5.png); }
+.back { background-image: url(/static/hanabi/img/back.png); }

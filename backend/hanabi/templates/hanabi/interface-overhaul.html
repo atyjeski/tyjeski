@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  {% load static %}
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hanabi</title>
+  <link rel="stylesheet" href="{% static 'hanabi/css/interface-overhaul.css' %}" type="text/css">
+
+</head>
+
+<body>
+  <div class="room-container">
+    <div class="played-cards">
+      <div class="played-cards__title">Played Cards</div>
+      <div class="played-cards__display">
+        <div class="played-cards__display--stack">
+          <div class="card r5"></div>
+        </div>
+        <div class="played-cards__display--stack">
+          <div class="card b5"></div>
+        </div>
+        <div class="played-cards__display--stack">
+          <div class="card g5"></div>
+        </div>
+        <div class="played-cards__display--stack">
+          <div class="card y5"></div>
+        </div>
+        <div class="played-cards__display--stack">
+          <div class="card p5"></div>
+        </div>
+      </div>
+    </div>
+    <div class="discarded-cards">
+      Discarded Cards
+    </div>
+    <div class="player-hands">
+        <div class="player-name">P1</div>
+        <div class="hand">
+          <div class="card r1"></div>
+          <div class="card r2"></div>
+          <div class="card r3"></div>
+          <div class="card r4"></div>
+        </div>
+
+        <div class="player-name">P2</div>
+        <div class="hand">
+          <div class="card b1"></div>
+          <div class="card b2"></div>
+          <div class="card b3"></div>
+          <div class="card b4"></div>
+        </div>
+
+        <div class="player-name">P3</div>
+        <div class="hand">
+          <div class="card g1"></div>
+          <div class="card g2"></div>
+          <div class="card g3"></div>
+          <div class="card g4"></div>
+        </div>
+
+        <div class="player-name">P4</div>
+        <div class="hand">
+          <div class="card y1"></div>
+          <div class="card y2"></div>
+          <div class="card y3"></div>
+          <div class="card y4"></div>
+        </div>
+        
+        <div class="player-name">P5</div>
+        <div class="hand">
+          <div class="card p1"></div>
+          <div class="card p2"></div>
+          <div class="card p3"></div>
+          <div class="card p4"></div>
+        </div>
+    </div>
+    <div class="game-text">
+      <div class="player-text">text</div>
+      <div class="player-text">text</div>
+      <div class="player-text">text</div>
+      <div class="player-text">text</div>
+      <div class="player-text">text</div>
+    </div>
+    <div class="game-info"></div>
+  </div>
+</body>
+
+</html>
+
+
