@@ -102,11 +102,7 @@ body {
     grid-template-columns: 4rem auto;
 }
 
-.played-cards { 
-    grid-area: played;
-    display: flex;
-    flex-direction: column;
-}
+.played-cards { grid-area: played; }
 
 .discarded-cards { grid-area: discarded; }
 
@@ -116,13 +112,32 @@ body {
 
 .game-info { grid-area: info; }
 
-/* Played Cards Section */
+/* Played and Discarded Sections */
+
+.played-cards,
+.discarded-cards { 
+    display: flex;
+    flex-direction: column;
+}
+
+.played-cards__title,
+.discarded-cards__title {
+    margin-bottom: .5rem;
+}
+
+.played-cards__display,
+.discarded-cards__display {
+    display: flex;
+    flex: 1;
+}
 
 .played-cards__display {
-    display: flex;
     justify-content: center;
-    align-items: center;
-    flex: 1;
+    margin-bottom: var(--fs-small);
+}
+
+.discarded-cards__display {
+    justify-content: left;
 }
 
 .played-cards__display--stack {
@@ -130,7 +145,18 @@ body {
     flex-direction: column;
 }
 
-/* Discarded Cards Section */
+.played-cards__display--stack > .card {
+    margin-bottom: calc( var(--card-height) * -.96);
+}
+
+.discarded-cards__display--stack {
+    display: flex;
+    flex-direction: row;
+}
+
+.discarded-cards__display--stack > .card {
+    margin-right: -1rem;
+}
 
 /* Players Section */
 
