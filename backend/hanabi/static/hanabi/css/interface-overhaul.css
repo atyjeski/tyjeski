@@ -15,6 +15,7 @@
     --clr-light: #fff;
     --clr-dark: #0d0d0d;
     --clr-bg: #272064;
+    --clr-highlight: rgb(255, 255, 0);
     --clr-lives: rgb(202, 32, 32);
     --clr-hints: rgb(31, 205, 248);
 
@@ -140,14 +141,49 @@ html {
 }
 
 .player-name {
-    width: calc(3 * var(--fs-medium));
+    width: calc(2.5 * var(--fs-medium));
     font-family: var(--ff-secondary);
     font-size: var(--fs-medium);
+    flex-shrink: 0;
 }
 
 .player-hand {
     display: flex;
+    flex-shrink: 0;
 }
+
+.player-text {
+    --triangle-width: calc(var(--card-width) * .4);
+
+    padding: var(--margin);
+    margin-left: var(--margin);
+    align-self: stretch;
+    min-width: calc(2.5 * var(--card-width));
+    position: relative;
+    margin-left: calc(var(--triangle-width) + var(--margin));
+}
+
+.player-text:before,
+.player-text:after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-top: calc(var(--triangle-width) * .5) solid transparent;
+    border-bottom: calc(var(--triangle-width) * .5) solid transparent;
+    bottom: var(--br);
+}
+
+.player-text:before {
+    border-right: var(--triangle-width) solid var(--clr-light);
+    left: calc(var(--triangle-width) * -1);
+}
+
+.player-text:after {
+    border-right: var(--triangle-width) solid var(--clr-dark);
+    left: calc(var(--triangle-width) * -1 + 1.5 * var(--bw));
+}
+
 
 /* Footer - Game Info Section */
 
