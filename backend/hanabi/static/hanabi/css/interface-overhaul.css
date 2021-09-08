@@ -141,10 +141,8 @@ html {
 }
 
 .player-name {
-    width: calc(2.5 * var(--fs-medium));
     font-family: var(--ff-secondary);
-    font-size: var(--fs-medium);
-    flex-shrink: 0;
+    margin-left: var(--margin);
 }
 
 .player-hand {
