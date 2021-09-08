@@ -19,10 +19,9 @@
     --clr-lives: rgb(202, 32, 32);
     --clr-hints: rgb(31, 205, 248);
 
-    --fs-small: 2vh;
-    --fs-medium: 4vh;
-    --fs-large: 6vh;
-    --fs-icon: 5vh;
+    --fs-small: 1.5vh;
+    --fs-medium: 2vh;
+    --fs-large: 5vh;
 
     --margin: 1vh;
 
@@ -32,8 +31,11 @@
     --card-width: 6vh;
     --card-height: 9vh;
 
-    --triangle-width: 2.5vh;
+    --triangle-width: 2vh;
     --text-bubble-width: 13vh;
+
+    --icon-bw: .7vh;
+    --icon-size: 10vh;
 }
 
 /* General Styles */
@@ -140,6 +142,7 @@ html {
 }
 
 .player-text {
+    font-size: var(--fs-medium);
     padding: var(--margin);
     align-self: stretch;
     min-width: var(--text-bubble-width);
@@ -173,15 +176,101 @@ html {
 /* Footer - Game Info Section */
 
 .game-info {
-    grid-area: info;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+}
+
+.icon-wrapper {
+    margin-left: 3vh;
+    margin-right: 3vh;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.icon {
+    height: var(--icon-size);
+    width: var(--icon-size);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.game-info > i {
-    font-size: var(--fs-icon);
+.icon-label {}
+
+.icon-counter {}
+
+/* Shapes for Icons */
+
+.deck-shape {
+    height: 100%;
+    width: 75%;
+    border: var(--icon-bw) solid var(--clr-light);
+    border-radius: var(--br);
 }
+
+.heart-shape {
+    position: relative;
+    width: 60%;
+    height: 60%;
+    background-color: var(--clr-hints);
+}
+
+.heart-shape:before,
+.heart-shape:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.heart-shape:before {
+    width: 100%; 
+    height: 150%; 
+    border-top-left-radius: 75% 50%;
+    border-top-right-radius: 75% 50%;
+}
+
+.heart-shape:after {
+    width: 150%; 
+    height: 100%; 
+    border-top-right-radius: 50% 75%;
+    border-bottom-right-radius: 50% 75%;
+}
+
+.heart-shape__exterior,
+.heart-shape__exterior:before,
+.heart-shape__exterior:after {
+    background-color: var(--clr-light);
+}
+
+.heart-shape__exterior {
+    transform: rotate(-45deg);
+    padding: var(--icon-bw);
+}
+
+.heart-shape__interior,
+.heart-shape__interior:before,
+.heart-shape__interior:after {
+    background-color: var(--clr-dark);
+    z-index: 2;
+}
+
+.heart-shape__interior {
+    height: 100%;
+    width: 100%;
+}
+
+.heart-shape__interior:before {
+    height: calc(150% + var(--icon-bw));
+}
+
+.heart-shape__interior:after {
+    width: calc(150% + var(--icon-bw));
+}
+
 
 /* Cards */
 
