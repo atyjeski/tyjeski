@@ -186,6 +186,7 @@ html {
 }
 
 .icon-wrapper {
+    position: relative;
     margin-left: 3vh;
     margin-right: 3vh;
     flex-shrink: 0;
@@ -200,9 +201,14 @@ html {
     align-items: center;
 }
 
-.icon-label {}
-
-.icon-counter {}
+.icon-counter {
+    z-index: 1;
+    font-size: var(--fs-large);
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin-top: var(--margin);
+}
 
 
 /* Shapes for Icons */
@@ -215,6 +221,7 @@ html {
     background-color: var(--clr-dark);
     border: var(--icon-bw) solid var(--clr-light);
     border-radius: var(--br);
+    margin-bottom: var(--margin);
 }
 
     /* hints */
@@ -224,11 +231,12 @@ html {
 
     position: relative;
     width: 100%;
-    height: 75%;
+    height: 70%;
     background-color: var(--clr-dark);
     border: var(--icon-bw) solid var(--clr-light);
     border-radius: var(--br);
-    margin-bottom: var(--triangle-height)
+    margin-bottom: var(--triangle-height);
+    margin-top: 5%;
 }
 
 .hint-shape:before,
