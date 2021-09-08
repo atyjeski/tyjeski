@@ -156,11 +156,11 @@ html {
     --triangle-width: calc(var(--card-width) * .4);
 
     padding: var(--margin);
-    margin-left: var(--margin);
     align-self: stretch;
     min-width: calc(2.5 * var(--card-width));
     position: relative;
     margin-left: calc(var(--triangle-width) + var(--margin));
+    margin-right: var(--margin);
 }
 
 .player-text:before,
@@ -176,12 +176,12 @@ html {
 
 .player-text:before {
     border-right: var(--triangle-width) solid var(--clr-light);
-    left: calc(var(--triangle-width) * -1);
+    left: calc(var(--triangle-width) * -1 - var(--bw) * .5);
 }
 
 .player-text:after {
     border-right: var(--triangle-width) solid var(--clr-dark);
-    left: calc(var(--triangle-width) * -1 + 1.5 * var(--bw));
+    left: calc(var(--triangle-width) * -1 + var(--bw) * 1.5);
 }
 
 
