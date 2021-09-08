@@ -21,18 +21,18 @@
 
     --fs-small: 1.5vh;
     --fs-medium: 2vh;
-    --fs-large: 5vh;
+    --fs-large: 4vh;
 
     --margin: 1vh;
 
     --bw: .25vh;
     --br: 1vh;
 
-    --card-width: 6vh;
-    --card-height: 9vh;
+    --card-width: 5vh;
+    --card-height: 7.5vh;
 
-    --icon-bw: .7vh;
-    --icon-size: 10vh;
+    --icon-bw: .6vh;
+    --icon-size: 8vh;
 }
 
 
@@ -123,6 +123,7 @@ html {
     display: flex;
     flex-direction: column;
     margin: var(--margin);
+    margin-top: 0;
 }
 
 .player-container {
@@ -207,7 +208,7 @@ html {
     position: absolute;
     width: 100%;
     text-align: center;
-    margin-top: var(--margin);
+    margin-top: var(--icon-bw);
 }
 
 
@@ -236,7 +237,7 @@ html {
     border: var(--icon-bw) solid var(--clr-light);
     border-radius: var(--br);
     margin-bottom: var(--triangle-height);
-    margin-top: 5%;
+    margin-top: 10%;
 }
 
 .hint-shape:before,
