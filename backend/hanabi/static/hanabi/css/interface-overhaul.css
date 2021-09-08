@@ -31,12 +31,10 @@
     --card-width: 6vh;
     --card-height: 9vh;
 
-    --triangle-width: 2vh;
-    --text-bubble-width: 13vh;
-
     --icon-bw: .7vh;
     --icon-size: 10vh;
 }
+
 
 /* General Styles */
 
@@ -71,6 +69,7 @@ html {
     border: var(--bw) solid var(--clr-light);
     border-radius: var(--br);
 }
+
 
 /* Header - Played and Discarded Sections */
 
@@ -116,6 +115,7 @@ html {
     margin-right: calc( var(--card-width) * -.7);;
 }
 
+
 /* Content - Player Hands and Game Text */
 
 .content {
@@ -142,6 +142,9 @@ html {
 }
 
 .player-text {
+    --triangle-width: 2vh;
+    --text-bubble-width: 13vh;
+
     font-size: var(--fs-medium);
     padding: var(--margin);
     align-self: stretch;
@@ -201,14 +204,56 @@ html {
 
 .icon-counter {}
 
+
 /* Shapes for Icons */
 
+    /* deck */
+
 .deck-shape {
-    height: 100%;
     width: 75%;
+    height: 100%;
+    background-color: var(--clr-dark);
     border: var(--icon-bw) solid var(--clr-light);
     border-radius: var(--br);
 }
+
+    /* hints */
+
+.hint-shape {
+    --triangle-height: 2.5vh;
+
+    position: relative;
+    width: 100%;
+    height: 75%;
+    background-color: var(--clr-dark);
+    border: var(--icon-bw) solid var(--clr-light);
+    border-radius: var(--br);
+    margin-bottom: var(--triangle-height)
+}
+
+.hint-shape:before,
+.hint-shape:after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-top: calc(var(--triangle-height) * .5) solid transparent;
+    border-right: calc(var(--triangle-height)) solid transparent;
+    left: var(--br);
+}
+
+.hint-shape:before {
+    border-top: var(--triangle-height) solid var(--clr-light);
+    bottom: calc(var(--triangle-height) * -1 - var(--icon-bw) * .5);
+}
+
+.hint-shape:after {
+    border-top: var(--triangle-height) solid var(--clr-dark);
+    bottom: calc(var(--triangle-height) * -1 + var(--icon-bw) * 1.5);
+    left: calc(var(--br) + var(--icon-bw) * .75);
+}
+
+    /* heart */
 
 .heart-shape {
     position: relative;
