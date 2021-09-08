@@ -19,23 +19,21 @@
     --clr-lives: rgb(202, 32, 32);
     --clr-hints: rgb(31, 205, 248);
 
-    --played-cards-width: min(66vw, 40vh);
-    --played-cards-height: min(33vw, 20vh);
+    --fs-small: 2vh;
+    --fs-medium: 4vh;
+    --fs-large: 6vh;
+    --fs-icon: 5vh;
 
-    --discard-cards-width: calc(100% - var(var(--played-cards-width)));
+    --margin: 1vh;
 
-    --card-width: calc(var(--played-cards-width) / 6);
-    --card-height: calc(var(--played-cards-height) / 2);
+    --bw: .25vh;
+    --br: 1vh;
 
-    --fs-small: calc(var(--played-cards-width) * .045);
-    --fs-medium: calc(var(--fs-small) * 2);
-    --fs-large: calc(var(--fs-small) * 3);
-    --fs-icon: calc(var(--fs-large) * 1.75);
+    --card-width: 6vh;
+    --card-height: 9vh;
 
-    --margin: calc(var(--fs-small) * .5);
-
-    --bw: calc(var(--fs-small) * .15);
-    --br: calc(var(--fs-small) * .8);
+    --triangle-width: 2.5vh;
+    --text-bubble-width: 13vh;
 }
 
 /* General Styles */
@@ -84,25 +82,16 @@ html {
     flex-direction: column;
 }
 
-.played-cards { 
-    height: var(--played-cards-height);
-    width: var(--played-cards-width);
-}
-
 .discarded-cards { 
     flex: 1;
     margin-left: 0;
-}
-
-.played-cards__title,
-.discarded-cards__title {
-    margin-bottom: var(--margin);
 }
 
 .played-cards__display,
 .discarded-cards__display {
     display: flex;
     flex: 1;
+    margin: var(--margin);
 }
 
 .played-cards__display { justify-content: center; }
@@ -151,11 +140,9 @@ html {
 }
 
 .player-text {
-    --triangle-width: calc(var(--card-width) * .4);
-
     padding: var(--margin);
     align-self: stretch;
-    min-width: calc(2.5 * var(--card-width));
+    min-width: var(--text-bubble-width);
     position: relative;
     margin-left: calc(var(--triangle-width) + var(--margin));
     margin-right: var(--margin);
