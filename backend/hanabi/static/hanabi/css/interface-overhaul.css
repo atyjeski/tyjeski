@@ -21,18 +21,19 @@
 
     --fs-small: 1.5vh;
     --fs-medium: 2vh;
-    --fs-large: 3.5vh;
+    --fs-large: 3vh;
 
     --margin: 0.6vh;
 
     --bw: .25vh;
     --br: 1vh;
 
-    --card-width: 5vh;
-    --card-height: 7.5vh;
+    --card-size: 2.7vh;
+    --card-width: calc(2 * var(--card-size));
+    --card-height: calc(3 * var(--card-size));
 
-    --icon-bw: .6vh;
-    --icon-size: 8vh;
+    --icon-bw: .5vh;
+    --icon-size: 6.5vh;
 }
 
 
@@ -120,8 +121,8 @@ html {
 
 .content {
     flex: 1;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: repeat(5, minmax(0, 1fr));
     margin: var(--margin);
     margin-top: 0;
 }
@@ -187,7 +188,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 12.5vh;
+    height: 10vh;
     padding-top: var(--margin);
 }
 
@@ -232,7 +233,7 @@ html {
     /* hints */
 
 .hint-shape {
-    --triangle-height: 2.5vh;
+    --triangle-height: calc(var(--icon-size) * .25);
 
     position: relative;
     width: 100%;
@@ -263,7 +264,7 @@ html {
 .hint-shape:after {
     border-top: var(--triangle-height) solid var(--clr-dark);
     bottom: calc(var(--triangle-height) * -1 + var(--icon-bw) * 1.5);
-    left: calc(var(--br) + var(--icon-bw) * .75);
+    left: calc(var(--br) + var(--icon-bw));
 }
 
     /* heart */
