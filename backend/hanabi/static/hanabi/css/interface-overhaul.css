@@ -4,7 +4,12 @@
     box-sizing: border-box;
 }
 
-/* Custom Properties */
+/*  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Custom Properties 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+*/
+
 
 :root {
     --ff-primary: 'Source Sans Pro', sans-serif;
@@ -37,7 +42,12 @@
 }
 
 
-/* General Styles */
+/*  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    General Styles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+*/
+
 
 html,
 body {
@@ -72,7 +82,12 @@ html {
 }
 
 
-/* Header - Played and Discarded Sections */
+/*  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Header - Played and Discarded
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+*/
+
 
 .header { display: flex; }
 
@@ -117,14 +132,20 @@ html {
 }
 
 
-/* Content - Player Hands and Game Text */
+/*  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Content - Player Hands and Text 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+*/
+
 
 .content {
     flex: 1;
     display: grid;
-    grid-template-rows: repeat(5, minmax(0, 1fr));
+    grid-template-rows: 20%;
     margin: var(--margin);
     margin-top: 0;
+    align-items: center;
 }
 
 .player-container {
@@ -182,7 +203,12 @@ html {
 }
 
 
-/* Footer - Game Info Section */
+/*  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Footer - Game Info Section 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+*/
+
 
 .game-info {
     display: flex;
@@ -217,7 +243,12 @@ html {
     margin-top: calc(var(--icon-bw) * 1.75);
 }
 
-/* Shapes for Icons */
+/*  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Shapes for Icons 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+*/
+
 
     /* deck */
 
@@ -331,13 +362,19 @@ html {
 }
 
 
-/* Cards */
+/*  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Cards
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+*/
+
 
 .card {
     background-size: 100%;
     height: var(--card-height);
     width: var(--card-width);
     background-repeat: no-repeat;
+    z-index: 100;
 }
 
 .r1 { background-image: url(/static/hanabi/img/r1.png); }
