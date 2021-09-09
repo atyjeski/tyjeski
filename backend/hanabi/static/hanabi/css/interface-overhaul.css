@@ -37,15 +37,20 @@
     --card-width: calc(2 * var(--card-size));
     --card-height: calc(3 * var(--card-size));
 
+    --text-triangle-width: 2vh;
+    --text-bubble-width: 13vh;
+
     --icon-bw: .5vh;
     --icon-size: 6.5vh;
 }
 
-@media (min-aspect-ratio: 4/3) {
+@media (min-aspect-ratio: 7/6) {
     :root {
         --card-size: 4vh;
         --card-width: calc(2 * var(--card-size));
         --card-height: calc(3 * var(--card-size));
+
+        --text-bubble-width: 18vh;
     }
 }
 
@@ -155,7 +160,7 @@ html {
     align-items: center;
 }
 
-@media (min-aspect-ratio: 4/3) {
+@media (min-aspect-ratio: 7/6) {
     .content {
         grid-template-rows: repeat(3, 33.33%);
         grid-auto-flow: column;
@@ -183,15 +188,12 @@ html {
 }
 
 .player-text {
-    --triangle-width: 2vh;
-    --text-bubble-width: 13vh;
-
     font-size: var(--fs-medium);
     padding: var(--margin);
     align-self: stretch;
     min-width: var(--text-bubble-width);
     position: relative;
-    margin-left: calc(var(--triangle-width) + var(--margin));
+    margin-left: calc(var(--text-triangle-width) + var(--margin));
     margin-right: var(--margin);
 }
 
@@ -201,19 +203,19 @@ html {
     width: 0;
     height: 0;
     position: absolute;
-    border-top: calc(var(--triangle-width) * .5) solid transparent;
-    border-bottom: calc(var(--triangle-width) * .5) solid transparent;
+    border-top: calc(var(--text-triangle-width) * .5) solid transparent;
+    border-bottom: calc(var(--text-triangle-width) * .5) solid transparent;
     bottom: var(--br);
 }
 
 .player-text:before {
-    border-right: var(--triangle-width) solid var(--clr-light);
-    left: calc(var(--triangle-width) * -1 - var(--bw) * .5);
+    border-right: var(--text-triangle-width) solid var(--clr-light);
+    left: calc(var(--text-triangle-width) * -1 - var(--bw) * .5);
 }
 
 .player-text:after {
-    border-right: var(--triangle-width) solid var(--clr-dark);
-    left: calc(var(--triangle-width) * -1 + var(--bw) * 1.5);
+    border-right: var(--text-triangle-width) solid var(--clr-dark);
+    left: calc(var(--text-triangle-width) * -1 + var(--bw) * 1.5);
 }
 
 
