@@ -159,9 +159,11 @@ html {
     align-items: center;
 }
 
+/* change layout for wide screens */
 @media (min-aspect-ratio: 7/6) {
     .content {
         grid-template-rows: repeat(3, 33.33%);
+        grid-auto-columns: minmax(50%, 100%);
         grid-auto-flow: column;
     }
 }
