@@ -271,6 +271,7 @@ html {
 .hint-icon { 
     background-image: url(/static/hanabi/img/hint.svg); 
     background-size: 90% auto;
+    background-position-y: 70%;
 }
 .deck-icon { background-image: url(/static/hanabi/img/deck.svg); }
 
