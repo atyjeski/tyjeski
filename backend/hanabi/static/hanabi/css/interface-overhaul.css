@@ -242,140 +242,24 @@ html {
     text-align: center;
 }
 
+.icon__counter {
+    font-size: var(--fs-large);
+    width: 100%;
+    text-align: center;
+    padding-top: 15%;
+}
+
 .icon {
     height: var(--icon-size);
     width: var(--icon-size);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.icon-counter {
-    z-index: 1;
-    font-size: var(--fs-large);
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    margin-top: calc(var(--icon-bw) * 1.75);
-}
-
-/*  
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    Shapes for Icons 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
-*/
-
-
-    /* deck */
-
-.deck-shape {
-    width: 75%;
-    height: 100%;
-    background-color: var(--clr-dark);
-    border: var(--icon-bw) solid var(--clr-light);
-    border-radius: var(--br);
-    margin-bottom: var(--margin);
-}
-
-    /* hints */
-
-.hint-shape {
-    --triangle-height: calc(var(--icon-size) * .25);
-
-    position: relative;
-    width: 100%;
-    height: 70%;
-    background-color: var(--clr-dark);
-    border: var(--icon-bw) solid var(--clr-light);
-    border-radius: var(--br);
-    margin-bottom: var(--triangle-height);
-    margin-top: 10%;
-}
-
-.hint-shape:before,
-.hint-shape:after {
-    content: '';
-    width: 0;
-    height: 0;
-    position: absolute;
-    border-top: calc(var(--triangle-height) * .5) solid transparent;
-    border-right: calc(var(--triangle-height)) solid transparent;
-    left: var(--br);
-}
-
-.hint-shape:before {
-    border-top: var(--triangle-height) solid var(--clr-light);
-    bottom: calc(var(--triangle-height) * -1 - var(--icon-bw) * .5);
-}
-
-.hint-shape:after {
-    border-top: var(--triangle-height) solid var(--clr-dark);
-    bottom: calc(var(--triangle-height) * -1 + var(--icon-bw) * 1.5);
-    left: calc(var(--br) + var(--icon-bw));
-}
-
-    /* heart */
-
-.heart-shape {
-    position: relative;
-    width: 60%;
-    height: 60%;
-    background-color: var(--clr-hints);
-}
-
-.heart-shape:before,
-.heart-shape:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: 1;
-}
-
-.heart-shape:before {
-    width: 100%; 
-    height: 150%; 
-    border-top-left-radius: 75% 50%;
-    border-top-right-radius: 75% 50%;
-}
-
-.heart-shape:after {
-    width: 150%; 
-    height: 100%; 
-    border-top-right-radius: 50% 75%;
-    border-bottom-right-radius: 50% 75%;
-}
-
-.heart-shape__exterior,
-.heart-shape__exterior:before,
-.heart-shape__exterior:after {
-    background-color: var(--clr-light);
-}
-
-.heart-shape__exterior {
-    transform: rotate(-45deg);
-    padding: var(--icon-bw);
-}
-
-.heart-shape__interior,
-.heart-shape__interior:before,
-.heart-shape__interior:after {
-    background-color: var(--clr-dark);
-    z-index: 2;
-}
-
-.heart-shape__interior {
-    height: 100%;
-    width: 100%;
-}
-
-.heart-shape__interior:before {
-    height: calc(150% + var(--icon-bw));
-}
-
-.heart-shape__interior:after {
-    width: calc(150% + var(--icon-bw));
-}
+.heart-icon { background-image: url(/static/hanabi/img/heart.svg); }
+.hint-icon { background-image: url(/static/hanabi/img/hint.svg); }
+.deck-icon { background-image: url(/static/hanabi/img/deck.svg); }
 
 
 /*  
