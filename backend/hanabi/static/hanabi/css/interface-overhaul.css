@@ -40,7 +40,6 @@
     --text-triangle-width: 2vh;
     --text-bubble-width: 13vh;
 
-    --icon-bw: .5vh;
     --icon-size: 6.5vh;
 }
 
@@ -237,8 +236,8 @@ html {
 .icon-wrapper {
     height: 100%;
     position: relative;
-    margin-left: 3vh;
-    margin-right: 3vh;
+    margin-left: 3vw;
+    margin-right: 3vw;
     flex-shrink: 0;
 }
 
@@ -246,14 +245,14 @@ html {
     position: absolute;
     width: 100%;
     text-align: center;
-    bottom: 0;
+    bottom: var(--margin);
 }
 
 .icon__counter {
     font-size: var(--fs-large);
     width: 100%;
     text-align: center;
-    padding-top: 13%;
+    padding-top: 17%;
 }
 
 .icon {
@@ -267,6 +266,7 @@ html {
 .heart-icon { 
     background-image: url(/static/hanabi/img/heart.svg); 
     background-size: 100% auto;
+    background-position-y: 25%;
 }
 .hint-icon { 
     background-image: url(/static/hanabi/img/hint.svg); 
