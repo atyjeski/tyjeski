@@ -235,18 +235,25 @@ html {
 }
 
 .icon-wrapper {
+    height: 100%;
     position: relative;
     margin-left: 3vh;
     margin-right: 3vh;
     flex-shrink: 0;
+}
+
+.icon-label {
+    position: absolute;
+    width: 100%;
     text-align: center;
+    bottom: 0;
 }
 
 .icon__counter {
     font-size: var(--fs-large);
     width: 100%;
     text-align: center;
-    padding-top: 15%;
+    padding-top: 13%;
 }
 
 .icon {
@@ -257,8 +264,14 @@ html {
     background-repeat: no-repeat;
 }
 
-.heart-icon { background-image: url(/static/hanabi/img/heart.svg); }
-.hint-icon { background-image: url(/static/hanabi/img/hint.svg); }
+.heart-icon { 
+    background-image: url(/static/hanabi/img/heart.svg); 
+    background-size: 100% auto;
+}
+.hint-icon { 
+    background-image: url(/static/hanabi/img/hint.svg); 
+    background-size: 90% auto;
+}
 .deck-icon { background-image: url(/static/hanabi/img/deck.svg); }
 
 
