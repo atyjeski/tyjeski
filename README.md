@@ -2,8 +2,17 @@
 
 Andres Tyjeski's personal web site
 
-To access PostgresDB, use
+# Setup
+
+Build and run Docker container locally using
 ```
-heroku run python manage.py makemigrations -a tyjeski
-heroku run python manage.py migrate -a tyjeski
+docker build \ 
+-t tyjeski .
+
+docker run -it \
+--name tyjeski \
+-e "PORT=8765" \
+-e "DEBUG=1" \
+-p 8007:8765 \
+tyjeski
 ```
