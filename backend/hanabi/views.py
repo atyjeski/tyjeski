@@ -61,15 +61,15 @@ def register_action(request):
 
     # At this point, the form data is valid.  Register and login the user.
     new_user = User.objects.create_user(username=form.cleaned_data['username'], 
-                                        password=form.cleaned_data['password'],
-                                        email=form.cleaned_data['email'],
-                                        first_name=form.cleaned_data['first_name'],
-                                        last_name=form.cleaned_data['last_name'])
+                                        password=form.cleaned_data['password'])
     new_user.save()
-    #create profile
-    new_player = Player.objects.create(user=new_user)
+    
     new_user = authenticate(username=form.cleaned_data['username'],
                             password=form.cleaned_data['password'])
+
+    #create profile
+    new_player = Player.objects.create(user=new_user)
+    new_player.save()
 
     login(request, new_user)
     return redirect(reverse('hanabi:home'))

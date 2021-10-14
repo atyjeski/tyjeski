@@ -40,10 +40,6 @@ class RegisterForm(forms.Form):
     confirm_password  = forms.CharField(max_length = 200, 
                                  label='Confirm',  
                                  widget = forms.PasswordInput())
-    email      = forms.CharField(max_length=50,
-                                 widget = forms.EmailInput())
-    first_name = forms.CharField(max_length=20)
-    last_name  = forms.CharField(max_length=20)
 
     # Customizes form validation for properties that apply to more
     # than one field.  Overrides the forms.Form.clean function.
