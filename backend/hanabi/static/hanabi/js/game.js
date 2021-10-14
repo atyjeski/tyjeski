@@ -127,7 +127,7 @@ function updateGameInfo(items) {
     for (let hand_index = 0; hand_index < hands.length; hand_index++) {
         let hand = hands[hand_index]
         let hand_element = document.createElement("li")
-        let inner_html = hand["username"] + '<div class="hand">'
+        let inner_html = sanitize(hand["username"]) + '<div class="hand">'
         if (hand["self"] && typeof(hand["cards"]) == "number") {
             for(let i = 0; i < hand["cards"]; i++) {
                 if(items['my_turn'] && items["active"]){
